@@ -8,5 +8,10 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "slug": "^4.0.3",
+    "superagent": "^6.1.0"
+  }
 }
