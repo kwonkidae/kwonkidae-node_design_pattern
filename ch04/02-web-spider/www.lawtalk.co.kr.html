@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko" ng-app="lawtalkApp" ng-strict-di>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,minimum-scale=1">
+    <meta name="fragment" content="!">
+    <title ng-bind="(metaTitle | metaTitleSuffix)">
+      로톡 - 변호사가 필요할 땐, 로톡
+    </title>
+    <meta name="description" content="{{ metaDescription }}">
+    <meta name="keywords" content="{{ metaKeywords || defaultMetaKeywords }}">
+    <meta name="robots" content="noarchive">
+    <meta property="al:android:package" content="kr.co.lawcompany.lawtalk">
+    <meta property="al:android:app_name" content="로톡 - 변호사가 필요할 땐, 로톡">
+    <meta property="fb:app_id" content="859245687468309">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:site_name" content="로톡 - 변호사가 필요할 땐, 로톡">
+    <meta property="og:title" content="{{ metaTitle | metaTitleSuffix }}">
+    <meta property="og:description" content="{{ metaDescription }}">
+    <meta property="og:image" content="{{ metaImagePath ? metaImagePath : 'https://d2ai3ajp99ywjy.cloudfront.net/app/images/37f50f504c543bcd28d189b29acc3a05.png' }}">
+    <meta property="og:image:width" content="{{ metaImageWidth ? metaImageWidth : '600' }}">
+    <meta property="og:image:height" content="{{ metaImageHeight ? metaImageHeight : '315' }}">
+    <meta property="og:url" content="" auto-canonical>
+    <meta name="naver-site-verification" content="a8d63d22afa882803712b4558744802832cb1674">
+    <meta name="lawtalk-version" content="20210311155130">
+    <meta name="branch" content="master
+">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="appleid-signin-client-id" content="kr.co.lawtalk">
+    <meta name="appleid-signin-scope" content="email">
+    <meta name="appleid-signin-redirect-uri" content="https://www.lawtalk.co.kr/api/user/auth-apple">
+    
+
+    <link rel="canonical" href="" auto-canonical>
+
+    
+    
+    <link rel="preload" href="https://d2ai3ajp99ywjy.cloudfront.net/app/core-8756c2f58ffc3c980595.css" as="style" onload="this.rel = 'stylesheet'">
+    
+
+    <!--[if lt IE 9]>
+      <script
+        type="text/javascript"
+        src="https://d2ai3ajp99ywjy.cloudfront.net/app/html5shiv-3ed50bb69ad3e21284020b11666916b7.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://d2ai3ajp99ywjy.cloudfront.net/app/es5-shim-b78ef0cf8bc99b51f2654c3392d50305.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://d2ai3ajp99ywjy.cloudfront.net/app/json3-4317dfd44921c30d0f2b3e99e3fd5e81.js"
+      ></script>
+    <![endif]-->
+
+    
+
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js">
+      AppleID.auth.init({
+          clientId: 'kr.co.lawtalk',
+          scope: 'email',
+          redirectURI: 'https://www.lawtalk.co.kr/api/user/auth-apple',
+          // state: 'TEST',
+        });
+    </script>
+
+    <style>
+      .async-hide {
+        opacity: 0 !important;
+      }
+    </style>
+    <script>
+      (function(a, s, y, n, c, h, i, d, e) {
+        s.className += ' ' + y;
+        h.start = 1 * new Date();
+        h.end = i = function() {
+          s.className = s.className.replace(RegExp(' ?' + y), '');
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function() {
+          i();
+          h.end = null;
+        }, c);
+        h.timeout = c;
+      })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+        'GTM-NJWZWRJ': true,
+      });
+    </script>
+
+    
+
+    
+    
+    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+    <script>
+      if (
+        window.location.host.indexOf('www.lawtalk.co.kr') !== -1 &&
+        !(navigator.userAgent + '').match(/phantomjs/i)
+      ) {
+        window.trackJs &&
+          trackJs.install({
+            token: '5b05809e0af4482aa4504079961b6b4c',
+          });
+      }
+    </script>
+    
+    
+
+    
+    <script type="text/javascript">
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        '//www.google-analytics.com/analytics.js',
+        'ga'
+      );
+      ga('create', 'UA-44221760-7', 'auto');
+      ga('require', 'GTM-NJWZWRJ');
+
+      window._gart_conversion_id = +'941263091';
+    </script>
+
+    
+    <script type="text/javascript">
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js',
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(
+        window,
+        document,
+        'script',
+        'dataLayer',
+        'GTM-KQLZ3C7'
+      );
+    </script>
+    
+
+    
+    <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" async></script>
+
+    
+    <script type="text/javascript">
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function() {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src =
+          (useSSL ? 'https:' : 'http:') +
+          '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+
+    
+    <script>
+      !(function(f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function() {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        '//connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '121732008170404');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=121732008170404&ev=PageView&noscript=1">
+    </noscript>
+    
+
+    
+    
+    <script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+    <script type="text/javascript">
+      kakaoPixel('2780591141085923341').pageView();
+    </script>
+    <script type="text/javascript">
+      window.prerenderReady = false;
+      window.FileAPI = {
+        jsUrl:
+          'https://d2ai3ajp99ywjy.cloudfront.net/app/FileAPI.min-b5f82f367d17c2aa9836d0cd7949a9ab.js',
+        flashUrl:
+          'https://d2ai3ajp99ywjy.cloudfront.net/app/FileAPI.flash-9caa3af68dd72a173a8d7befecef5eb5.swf',
+      };
+    </script>
+
+    
+    <script type="text/javascript" async>
+      (function(p, l, o, w, i, n, g) {
+        if (!p[i]) {
+          p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+          p.GlobalSnowplowNamespace.push(i);
+          p[i] = function() {
+            (p[i].q = p[i].q || []).push(arguments);
+          };
+          p[i].q = p[i].q || [];
+          n = l.createElement(o);
+          g = l.getElementsByTagName(o)[0];
+          n.async = 1;
+          n.src = w;
+          g.parentNode.insertBefore(n, g);
+        }
+      })(
+        window,
+        document,
+        'script',
+        // https://discourse.snowplowanalytics.com/t/deprecation-notice-snowplow-cdn-for-js-assets/4274 이슈로 cdn변경
+        '//cdn.jsdelivr.net/gh/snowplow/sp-js-assets@2.10.2/sp.js',
+        'snowplow_tracker'
+      );
+    </script>
+    <script type="text/javascript">
+      snowplow_tracker(
+        'newTracker',
+        'webtracking',
+        'log.lawtalk.co.kr/analytics',
+        {
+          appId: 'lawtalk',
+          eventMethod: 'get',
+          encodeBase64: false,
+          userFingerprint: true,
+          platform: 'web',
+          contexts: {
+            webPage: true,
+            performanceTiming: true,
+            gaCookies: false,
+            geolocation: false,
+          },
+        }
+      );
+      // snowplow_tracker('enableLinkClickTracking');
+      // snowplow_tracker('enableFormTracking');
+      //      snowplow_tracker('enableErrorTracking')
+      snowplow_tracker('enableActivityTracking', 20, 20);
+      snowplow_tracker('trackPageView:webtracking', 'title', [
+        {
+          data: {
+            Date: new Date().toString(),
+            Content: 'Default trackPageView',
+          },
+        },
+      ]);
+    </script>
+    
+  </head>
+
+  <body>
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQLZ3C7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <div ng-if="isLoadingState" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: none #ffffff; z-index: 999999;">
+      <div style="position: absolute; top: 50%; left: 0; width: 100%; margin-top: -40px; text-align: center;">
+        <img src="https://d2ai3ajp99ywjy.cloudfront.net/app/images/156e49c0dd87ea691e8b9e48913b27ea.gif" alt="페이지를 불러오는 중입니다." style="width: 80px; height: 80px;">
+      </div>
+    </div>
+
+    <div ui-view="" id="root-view"></div>
+
+    
+    <script type="text/javascript" src="https://d2ai3ajp99ywjy.cloudfront.net/app/core-8756c2f58ffc3c980595.js" async></script>
+    
+
+    
+    <script type="text/javascript">
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId: '859245687468309',
+          xfbml: true,
+          version: 'v2.2',
+        });
+      };
+
+      (function(d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = '//connect.facebook.net/ko_KR/sdk.js';
+        js.async = !0;
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, 'script', 'facebook-jssdk');
+    </script>
+
+    <script type="text/javascript">
+      /*! loadCSS: load a CSS file asynchronously. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT */
+      /*! CSS rel=preload polyfill. Depends on loadCSS function. [c]2016 @scottjehl, Filament Group, Inc. Licensed MIT  */
+      !(function(e) {
+        var t,
+          n = function(t, n, r) {
+            function o(e) {
+              return s.body
+                ? e()
+                : void setTimeout(function() {
+                    o(e);
+                  });
+            }
+
+            function l() {
+              c.addEventListener && c.removeEventListener('load', l),
+                (c.media = r || 'all');
+            }
+            var a,
+              i,
+              d,
+              u,
+              s = e.document,
+              c = s.createElement('link');
+            return (
+              n
+                ? (a = n)
+                : ((i = (s.body || s.getElementsByTagName('head')[0])
+                    .childNodes),
+                  (a = i[i.length - 1])),
+              (d = s.styleSheets),
+              (c.rel = 'stylesheet'),
+              (c.href = t),
+              (c.media = 'only x'),
+              o(function() {
+                a.parentNode.insertBefore(c, n ? a : a.nextSibling);
+              }),
+              (u = function(e) {
+                for (var t = c.href, n = d.length; n--; )
+                  if (d[n].href === t) return e();
+                setTimeout(function() {
+                  u(e);
+                });
+              }),
+              c.addEventListener && c.addEventListener('load', l),
+              (c.onloadcssdefined = u),
+              u(l),
+              c
+            );
+          },
+          r = (n.relpreload = {});
+        (r.support = function() {
+          try {
+            return e.document.createElement('link').relList.supports('preload');
+          } catch (t) {
+            return !1;
+          }
+        }),
+          (r.poly = function() {
+            var t,
+              r,
+              o = e.document.getElementsByTagName('link');
+            for (t = 0; t < o.length; t++)
+              (r = o[t]),
+                'preload' === r.rel &&
+                  'style' === r.getAttribute('as') &&
+                  (n(r.href, r), (r.rel = null));
+          }),
+          r.support() ||
+            (r.poly(),
+            (t = e.setInterval(r.poly, 300)),
+            e.addEventListener &&
+              e.addEventListener('load', function() {
+                e.clearInterval(t);
+              }),
+            e.attachEvent &&
+              e.attachEvent('onload', function() {
+                e.clearInterval(t);
+              }));
+      })(window);
+    </script>
+  </body>
+</html>
